@@ -41,4 +41,7 @@ sudo apt-get remove libreoffice* thunderbird*
 # xfconf-query --channel xfce4-keyboard-shortcuts --property "/xfwm4/custom/<Primary><Shift>Tab" --create --type string --set "cycle_reverse_windows_key"
 # xfconf-query --channel xfce4-keyboard-shortcuts --property "/commands/custom/<Primary>Escape" --reset
 # xfconf-query --channel xfce4-keyboard-shortcuts --property "/commands/custom/<Primary>Escape" --create --type string --set "xfce4-popup-whiskermenu"
-          
+xfconf-query --channel xfce4-keyboard-shortcuts --property "/commands/custom/<Primary>Escape" --reset
+xfconf-query -v -c xfce4-keyboard-shortcuts -l
+xfconf-query --channel xfce4-keyboard-shortcuts --property "/commands/custom/<Primary>space" --create --type string --set "xfce4-popup-whiskermenu"
+
