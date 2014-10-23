@@ -4,20 +4,23 @@ add-apt-repository -y ppa:ubuntu-sdk-team/ppa
 apt-add-repository -y "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 add-apt-repository -y ppa:jerzy-kozera/zeal-ppa 
 add-apt-repository -y ppa:chris-lea/node.js
-apt-add-repository -y ppa:synapse-core/testing
 apt-get update
 
-apt-get -y install dkms build-essential aptitude
-apt-get -y install aptitude build-essential compizconfig-settings-manager curl dkms dselect gconf-editor mesa-utils powertop synapse terminator unetbootin vim xclip 
+## Trusty
+# Utils
+apt-get -y install aptitude build-essential compizconfig-settings-manager curl dkms dselect gconf-editor mesa-utils powertop terminator unetbootin vim xclip 
 
 # Developer tools
-sudo apt-get -y install apache2 git gitg mongodb nodejs php5 php5-mysql python-dev python-pip python-tk zeal
+apt-get -y install apache2 git gitg mongodb nodejs php5 python-dev python-pip python-tk zeal
 
 # AV
-sudo apt-get -y install audacity ffmpeg flac lame pavucontrol spotify-client vorbis-tools
+apt-get -y install audacity flac lame pavucontrol spotify-client vorbis-tools
 
 # Productivity
-sudo apt-get -y install abiword fonts-droid fonts-roboto gnumeric 
+apt-get -y install abiword fonts-droid fonts-roboto gnumeric 
+
+# NEED INPUT
+# sudo apt-get install libapache2-mod-auth-mysql  php5-mysql msttcorefonts mysql-server nautilus-dropbox ffmpeg
 
 # Apps
 wget https://dl.google.com/linux/direct/google-chrome-beta_current_i386.deb
